@@ -25,7 +25,7 @@ async def forward_to_channel(bot: Client, message: Message, editable: Message):
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        [InlineKeyboardButton("Ban User", callback_data=f"ban_user_{str(editable.chat.id)}")]
+                        [InlineKeyboardButton("𒊹 𝖡𝖺𝗇 𝖴𝗌𝖾𝗋", callback_data=f"ban_user_{str(editable.chat.id)}")]
                     ]
                 )
             )
@@ -46,23 +46,23 @@ async def save_batch_media_in_channel(bot: Client, editable: Message, message_id
             text=message_ids_str,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("Delete Batch", callback_data="closeMessage")
+                InlineKeyboardButton("➜ 𝖣𝖾𝗅𝖾𝗍𝖾 𝖡𝖺𝗍𝖼𝗁", callback_data="closeMessage")
             ]])
         )
-        share_link = f"https://t.me/{Config.BOT_USERNAME}?start=AbirHasan2005_{str_to_b64(str(SaveMessage.id))}"
+        share_link = f"https://t.me/{Config.BOT_USERNAME}?start=ItachiUchiha_{str_to_b64(str(SaveMessage.id))}"
         await editable.edit(
-            f"**Batch Files Stored in my Database!**\n\nHere is the Permanent Link of your files: {share_link} \n\n"
-            f"Just Click the link to get your files!",
+            f"**➜ 𝖡𝖺𝗍𝖼𝗁 𝖥𝗂𝗅𝖾𝗌 𝖲𝗍𝗈𝗋𝖾𝖽 𝖨𝗇 𝖬𝗒 𝖣𝖺𝗍𝖺𝖻𝖺𝗌𝖾 !**\n\n𝖧𝖾𝗋𝖾 𝖨𝗌 𝖳𝗁𝖾 𝖯𝖾𝗋𝗆𝖺𝗇𝖾𝗇𝗍 𝖫𝗂𝗇𝗄 𝖮𝖿 𝖸𝗈𝗎𝗋 𝖥𝗂𝗅𝖾𝗌 : {share_link} \n\n"
+            f"➜ 𝖩𝗎𝗌𝗍 𝖢𝗅𝗂𝖼𝗄 𝖳𝗁𝖾 𝖫𝗂𝗇𝗄 𝖳𝗈 𝖦𝖾𝗍 𝖥𝗂𝗅𝖾𝗌!",
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("Open Link", url=share_link)],
-                 [InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates"),
-                  InlineKeyboardButton("Support Group", url="https://t.me/JoinOT")]]
+                [[InlineKeyboardButton("🍁 𝖮𝗉𝖾𝗇 𝖫𝗂𝗇𝗄 🍁", url=share_link)],
+                 [InlineKeyboardButton("🌧 𝖴𝗉𝖽𝖺𝗍𝖾𝗌 𝖢𝗁𝖺𝗇𝗇𝖾𝗅", url="https://t.me/Infinity_Backup"),
+                  InlineKeyboardButton("𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉 🌥", url="https://t.me/InfinityRobots")]]
             ),
             disable_web_page_preview=True
         )
         await bot.send_message(
             chat_id=int(Config.LOG_CHANNEL),
-            text=f"#BATCH_SAVE:\n\n[{editable.reply_to_message.from_user.first_name}](tg://user?id={editable.reply_to_message.from_user.id}) Got Batch Link!",
+            text=f"#BATCH_SAVE:\n\n[{editable.reply_to_message.from_user.first_name}](tg://user?id={editable.reply_to_message.from_user.id}) 𝖦𝗈𝗍 𝖡𝖺𝗍𝖼𝗁 𝖫𝗂𝗇𝗄 !",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Open Link", url=share_link)]])
         )
@@ -70,11 +70,11 @@ async def save_batch_media_in_channel(bot: Client, editable: Message, message_id
         await editable.edit(f"Something Went Wrong!\n\n**Error:** `{err}`")
         await bot.send_message(
             chat_id=int(Config.LOG_CHANNEL),
-            text=f"#ERROR_TRACEBACK:\nGot Error from `{str(editable.chat.id)}` !!\n\n**Traceback:** `{err}`",
+            text=f"#ERROR_TRACEBACK:\n𝖦𝗈𝗍 𝖤𝗋𝗋𝗈𝗋 𝖥𝗋𝗈𝗆 `{str(editable.chat.id)}` !!\n\n**➜ 𝖳𝗋𝖺𝖼𝖾𝖻𝖺𝖼𝗄 :** `{err}`",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("Ban User", callback_data=f"ban_user_{str(editable.chat.id)}")]
+                    [InlineKeyboardButton("𒊹 𝖡𝖺𝗇 𝖴𝗌𝖾𝗋", callback_data=f"ban_user_{str(editable.chat.id)}")]
                 ]
             )
         )
@@ -85,23 +85,23 @@ async def save_media_in_channel(bot: Client, editable: Message, message: Message
         forwarded_msg = await message.forward(Config.DB_CHANNEL)
         file_er_id = str(forwarded_msg.id)
         await forwarded_msg.reply_text(
-            f"#PRIVATE_FILE:\n\n[{message.from_user.first_name}](tg://user?id={message.from_user.id}) Got File Link!",
+            f"#PRIVATE_FILE:\n\n[{message.from_user.first_name}](tg://user?id={message.from_user.id}) 𝖦𝗈𝗍 𝖥𝗂𝗅𝖾 𝖫𝗂𝗇𝗄 !",
             disable_web_page_preview=True)
-        share_link = f"https://t.me/{Config.BOT_USERNAME}?start=AbirHasan2005_{str_to_b64(file_er_id)}"
+        share_link = f"https://t.me/{Config.BOT_USERNAME}?start=ItachiUchiha_{str_to_b64(file_er_id)}"
         await editable.edit(
-            "**Your File Stored in my Database!**\n\n"
-            f"Here is the Permanent Link of your file: {share_link} \n\n"
-            "Just Click the link to get your file!",
+            "**➜ 𝖸𝗈𝗎𝗋 𝖥𝗂𝗅𝖾𝗌 𝖲𝗍𝗈𝗋𝖾𝖽 𝖨𝗇 𝖬𝗒 𝖣𝖺𝗍𝖺𝖻𝖺𝗌𝖾 !**\n\n"
+            f"𝖧𝖾𝗋𝖾 𝖨𝗌 𝖳𝗁𝖾 𝖯𝖾𝗋𝗆𝖺𝗇𝖾𝗇𝗍 𝖫𝗂𝗇𝗄 𝖮𝖿 𝖸𝗈𝗎𝗋 𝖥𝗂𝗅𝖾𝗌 : {share_link} \n\n"
+            "➜ 𝖩𝗎𝗌𝗍 𝖢𝗅𝗂𝖼𝗄 𝖳𝗁𝖾 𝖫𝗂𝗇𝗄 𝖳𝗈 𝖦𝖾𝗍 𝖥𝗂𝗅𝖾𝗌 !",
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("Open Link", url=share_link)],
-                 [InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates"),
-                  InlineKeyboardButton("Support Group", url="https://t.me/JoinOT")]]
+                [[InlineKeyboardButton("🍁 𝖮𝗉𝖾𝗇 𝖫𝗂𝗇𝗄 🍁", url=share_link)],
+                 [InlineKeyboardButton("🌧 𝖴𝗉𝖽𝖺𝗍𝖾𝗌 𝖢𝗁𝖺𝗇𝗇𝖾𝗅", url="https://t.me/Infinity_Backup"),
+                  InlineKeyboardButton("𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉 🌥", url="https://t.me/InfinityRobots")]]
             ),
             disable_web_page_preview=True
         )
     except FloodWait as sl:
         if sl.value > 45:
-            print(f"Sleep of {sl.value}s caused by FloodWait ...")
+            print(f"𝖲𝗅𝖾𝖾𝗉 𝖮𝖿 {sl.value}s 𝖢𝖺𝗎𝗌𝖾𝖽 𝖡𝗒 𝖥𝗅𝗈𝗈𝖽𝖶𝖺𝗂𝗍....")
             await asyncio.sleep(sl.value)
             await bot.send_message(
                 chat_id=int(Config.LOG_CHANNEL),
