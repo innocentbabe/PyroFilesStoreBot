@@ -22,31 +22,23 @@ class Config(object):
 This is Permanent Files Store Bot!
 Send me any file I will save it in my Database. Also works for channel. Add me to channel as Admin with Edit Permission, I will add Save Uploaded File in Channel & add Sharable Button Link.
 
-🤖 **My Name:** [Files Store Bot](https://t.me/{BOT_USERNAME})
+**➜ 𝖬𝗒 𝖭𝖺𝗆𝖾 :** [𝖥𝗂𝗅𝖾 𝖲𝗍𝗈𝗋𝖾 𝖡𝗈𝗍](https://t.me/{BOT_USERNAME})
 
-📝 **Language:** [Python3](https://www.python.org)
+**➜ 𝖫𝗂𝖻𝗋𝖺𝗋𝗒 :** [𝖯𝗒𝗍𝗁𝗈𝗇3](https://www.python.org)
 
-📚 **Library:** [Pyrogram](https://docs.pyrogram.org)
+**🧑‍💻 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋 :** @DRDIC
 
-📡 **Hosted on:** [Heroku](https://heroku.com)
+**𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉 🌥 :** [𝖨𝗇𝖿𝗂𝗇𝗂𝗍𝗒 𝖱𝗈𝖻𝗈𝗍𝗌](https://t.me/InfinityRobots)
 
-🧑🏻‍💻 **Developer:** @AbirHasan2005
-
-👥 **Support Group:** [Linux Repositories](https://t.me/DevsZone)
-
-📢 **Updates Channel:** [Discovery Projects](https://t.me/Discovery_Updates)
+**🌧 𝖴𝗉𝖽𝖺𝗍𝖾𝗌 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 :** [𝖨𝗇𝖿𝗂𝗇𝗂𝗍𝗒 𝖤𝖽𝗎𝖼𝖺𝗍𝗂𝗈𝗇](https://t.me/Infinity_Backup)
 """
 	ABOUT_DEV_TEXT = f"""
-🧑🏻‍💻 **Developer:** @AbirHasan2005
+🧑🏻‍💻 **𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋 :** @DRDIC
 
-Developer is Super Noob. Just Learning from Official Docs. Please Donate the developer for Keeping the Service Alive.
-
-Also remember that developer will Delete Adult Contents from Database. So better don't Store Those Kind of Things.
-
-[Donate Now](https://www.paypal.me/AbirHasan2005) (PayPal)
+➜ 𝖨 𝖶𝗂𝗅𝗅 𝖡𝖺𝗇 𝖸𝗈𝗎 𝖥𝗈𝗋𝖾𝗏𝖾𝗋 𝖨𝖿 𝖸𝗈𝗎 𝖲𝗍𝗈𝗋𝖾 𝖠𝖽𝗎𝗅𝗍 𝖢𝗈𝗇𝗍𝖾𝗇𝗍𝗌.
 """
 	HOME_TEXT = """
-Hi, [{}](tg://user?id={})\n\nThis is Permanent **File Store Bot**.
+𝖧𝗂𝗂 , [{}](tg://user?id={})\n\n𝖳𝗁𝗂𝗌 𝖨𝗌 𝖯𝖾𝗋𝗆𝖺𝗇𝖾𝗇𝗍 **𝖥𝗂𝗅𝖾 𝖲𝗍𝗈𝗋𝖾 𝖡𝗈𝗍**.
 
-Send me any file I will give you a permanent Sharable Link. I Support Channel Also! Check **About Bot** Button.
+𝖲𝖾𝗇𝖽 𝖬𝖾 𝖠𝗇𝗒 𝖥𝗂𝗅𝖾 𝖨 𝖶𝗂𝗅𝗅 𝖦𝗂𝗏𝖾 𝖸𝗈𝗎 𝖠 𝖯𝖾𝗋𝗆𝖺𝗇𝖾𝗇𝗍 𝖲𝗁𝖺𝗋𝖾𝖺𝖻𝗅𝖾 𝖫𝗂𝗇𝗄. 𝖨 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖠𝗅𝗌𝗈 ! 𝖢𝗁𝖾𝖼𝗄 **𝖠𝖻𝗈𝗎𝗍 𝖡𝗈𝗍** 𝖡𝗎𝗍𝗍𝗈𝗇.
 """
