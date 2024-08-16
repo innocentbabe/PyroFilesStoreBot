@@ -58,7 +58,7 @@ async def _(bot: Client, cmd: Message):
 async def start(bot: Client, cmd: Message):
 
     if cmd.from_user.id in Config.BANNED_USERS:
-        await cmd.reply_text("Sorry, You are banned.")
+        await cmd.reply_text("𝖲𝗈𝗋𝗋𝗒, 𝖸𝗈𝗎 𝖠𝗋𝖾 𝖡𝖺𝗇𝗇𝖾𝖽.")
         return
     if Config.UPDATES_CHANNEL is not None:
         back = await handle_force_sub(bot, cmd)
@@ -74,12 +74,12 @@ async def start(bot: Client, cmd: Message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Support Group", url="https://t.me/JoinOT"),
-                        InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")
+                        InlineKeyboardButton("🌧 𝖴𝗉𝖽𝖺𝗍𝖾𝗌 𝖢𝗁𝖺𝗇𝗇𝖾𝗅", url="https://t.me/Infinity_Backup"),
+                        InlineKeyboardButton("𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉 🌥", url="https://t.me/InfinityRobots")
                     ],
                     [
-                        InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-                        InlineKeyboardButton("About Dev", callback_data="aboutdevs")
+                        InlineKeyboardButton("𝖠𝖻𝗈𝗎𝗍 𝖡𝗈𝗍", callback_data="aboutbot"),
+                        InlineKeyboardButton("𝖠𝖻𝗈𝗎𝗍 𝖣𝖾𝗏", callback_data="aboutdevs")
                     ]
                 ]
             )
@@ -120,7 +120,7 @@ async def main(bot: Client, message: Message):
                 return
 
         if message.from_user.id in Config.BANNED_USERS:
-            await message.reply_text("Sorry, You are banned!\n\nContact [Support Group](https://t.me/JoinOT)",
+            await message.reply_text("𝖲𝗈𝗋𝗋𝗒, 𝖸𝗈𝗎 𝖠𝗋𝖾 𝖡𝖺𝗇𝗇𝖾𝖽!\n\n𝖢𝗈𝗇𝗍𝖺𝖼𝗍 [𝖨𝗍𝖺𝖼𝗁𝗂 𝖴𝖼𝗁𝗂𝗁𝖺](https://t.me/DRDIC)",
                                      disable_web_page_preview=True)
             return
 
@@ -128,10 +128,10 @@ async def main(bot: Client, message: Message):
             return
 
         await message.reply_text(
-            text="**Choose an option from below:**",
+            text="**๏ 𝖢𝗁𝗈𝗌𝖾 𝖠𝗇 𝖮𝗉𝗍𝗂𝗈𝗇 𝖥𝗋𝗈𝗆 𝖡𝖾𝗅𝗈𝗐 :**",
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("Save in Batch", callback_data="addToBatchTrue")],
-                [InlineKeyboardButton("Get Sharable Link", callback_data="addToBatchFalse")]
+                [InlineKeyboardButton("➜ 𝖲𝖺𝗏𝖾 𝖨𝗇 𝖡𝖺𝗍𝖼𝗁", callback_data="addToBatchTrue")],
+                [InlineKeyboardButton("➜ 𝖦𝖾𝗍 𝖲𝗁𝖺𝗋𝖾𝖺𝖻𝗅𝖾 𝖫𝗂𝗇𝗄", callback_data="addToBatchFalse")]
             ]),
             quote=True,
             disable_web_page_preview=True
@@ -148,10 +148,10 @@ async def main(bot: Client, message: Message):
         try:
             forwarded_msg = await message.forward(Config.DB_CHANNEL)
             file_er_id = str(forwarded_msg.id)
-            share_link = f"https://t.me/{Config.BOT_USERNAME}?start=AbirHasan2005_{str_to_b64(file_er_id)}"
+            share_link = f"https://t.me/{Config.BOT_USERNAME}?start=ItachiUchiha_{str_to_b64(file_er_id)}"
             CH_edit = await bot.edit_message_reply_markup(message.chat.id, message.id,
                                                           reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(
-                                                              "Get Sharable Link", url=share_link)]]))
+                                                              "➜ 𝖦𝖾𝗍 𝖲𝗁𝖺𝗋𝖾𝖺𝖻𝗅𝖾 𝖫𝗂𝗇𝗄", url=share_link)]]))
             if message.chat.username:
                 await forwarded_msg.reply_text(
                     f"#CHANNEL_BUTTON:\n\n[{message.chat.title}](https://t.me/{message.chat.username}/{CH_edit.id}) Channel's Broadcasted File's Button Added!")
@@ -184,7 +184,7 @@ async def broadcast_handler_open(_, m: Message):
 async def sts(_, m: Message):
     total_users = await db.total_users_count()
     await m.reply_text(
-        text=f"**Total Users in DB:** `{total_users}`",
+        text=f"**➜ 𝖳𝗈𝗍𝖺𝗅 𝖴𝗌𝖾𝗋 𝖨𝗇 𝖣𝖡 :** `{total_users}`",
         quote=True
     )
 
@@ -300,7 +300,7 @@ async def _banned_users(_, m: Message):
 @Bot.on_message(filters.private & filters.command("clear_batch"))
 async def clear_user_batch(bot: Client, m: Message):
     MediaList[f"{str(m.from_user.id)}"] = []
-    await m.reply_text("Cleared your batch files successfully!")
+    await m.reply_text("**𝖢𝗅𝖾𝖺𝗋𝖾𝖽 𝖸𝗈𝗎𝗋 𝖡𝖺𝗍𝖼𝗁 𝖥𝗂𝗅𝖾𝗌 𝖲𝗎𝖼𝖼𝖾𝗌𝗌𝖿𝗎𝗅𝗅𝗒 !**")
 
 
 @Bot.on_callback_query()
@@ -314,12 +314,12 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Source Codes of Bot",
-                                             url="https://github.com/AbirHasan2005/PyroFilesStoreBot")
+                        InlineKeyboardButton("𝖲𝗈𝗎𝗋𝖼𝖾 𝖢𝗈𝖽𝖾𝗌 𝖮𝖿 𝖡𝗈𝗍",
+                                             url="https://t.me/InfinityRobots")
                     ],
                     [
-                        InlineKeyboardButton("Go Home", callback_data="gotohome"),
-                        InlineKeyboardButton("About Dev", callback_data="aboutdevs")
+                        InlineKeyboardButton("🌥 𝖧𝗈𝗆𝖾 🍁", callback_data="gotohome"),
+                        InlineKeyboardButton("🧑‍💻 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋 ", callback_data="aboutdevs")
                     ]
                 ]
             )
@@ -332,12 +332,12 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Source Codes of Bot",
-                                             url="https://github.com/AbirHasan2005/PyroFilesStoreBot")
+                        InlineKeyboardButton("𝖲𝗈𝗎𝗋𝖼𝖾 𝖢𝗈𝖽𝖾𝗌 𝖮𝖿 𝖡𝗈𝗍 ",
+                                             url="https://t.me/InfinityRobots")
                     ],
                     [
-                        InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-                        InlineKeyboardButton("Go Home", callback_data="gotohome")
+                        InlineKeyboardButton("🌥 𝖠𝖻𝗈𝗎𝗍 𝖡𝗈𝗍", callback_data="aboutbot"),
+                        InlineKeyboardButton("𝖧𝗈𝗆𝖾 🍁", callback_data="gotohome")
                     ]
                 ]
             )
@@ -350,12 +350,12 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Support Group", url="https://t.me/JoinOT"),
-                        InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")
+                        InlineKeyboardButton("🌧 𝖴𝗉𝖽𝖺𝗍𝖾𝗌 𝖢𝗁𝖺𝗇𝗇𝖾𝗅", url="https://t.me/Infinity_Backup"),
+                        InlineKeyboardButton("𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉 🌥", url="https://t.me/InfinityRobots")
                     ],
                     [
-                        InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-                        InlineKeyboardButton("About Dev", callback_data="aboutdevs")
+                        InlineKeyboardButton("𝖠𝖻𝗈𝗎𝗍 𝖡𝗈𝗍 🍁", callback_data="aboutbot"),
+                        InlineKeyboardButton("🧑‍💻 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋", callback_data="aboutdevs")
                     ]
                 ]
             )
@@ -371,22 +371,22 @@ async def button(bot: Client, cmd: CallbackQuery):
                 user = await bot.get_chat_member(channel_chat_id, cmd.message.chat.id)
                 if user.status == "kicked":
                     await cmd.message.edit(
-                        text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/JoinOT).",
+                        text="𝖲𝗈𝗋𝗋𝗒 𝖲𝗂𝗋 𝖸𝗈𝗎 𝖠𝗋𝖾 𝖡𝖺𝗇𝗇𝖾𝖽 𝖳𝗈 𝖴𝗌𝖾 𝖬𝖾. 𝖢𝗈𝗇𝗍𝖺𝖼𝗍 𝖬𝗒 [𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋](https://t.me/DRDIC).",
                         disable_web_page_preview=True
                     )
                     return
             except UserNotParticipant:
                 invite_link = await get_invite_link(channel_chat_id)
                 await cmd.message.edit(
-                    text="**You Still Didn't Join ☹️, Please Join My Updates Channel to use this Bot!**\n\n"
-                         "Due to Overload, Only Channel Subscribers can use the Bot!",
+                    text="**➜ 𝖯𝗅𝖾𝖺𝗌𝖾 𝖩𝗈𝗂𝗇 𝖬𝗒 𝖴𝗉𝖽𝖺𝗍𝖾𝗌 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖳𝗈 𝖴𝗌𝖾 𝖳𝗁𝗂𝗌 𝖡𝗈𝗍!**\n\n"
+                         "๏ 𝖣𝗎𝖾 𝖳𝗈 𝖮𝗏𝖾𝗋𝗅𝗈𝖺𝖽 , 𝖮𝗇𝗅𝗒 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖬𝖾𝗆𝖻𝖾𝗋𝗌 𝖢𝖺𝗇 𝖦𝖾𝗍 𝖥𝗂𝗅𝖾𝗌!",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
+                                InlineKeyboardButton("➜ 𝖢𝗅𝗂𝖼𝗄 𝖠𝗇𝖽 𝖩𝗈𝗂𝗇 𝖢𝗁𝖺𝗇𝗇𝖾𝗅", url=invite_link.invite_link)
                             ],
                             [
-                                InlineKeyboardButton("🔄 Refresh 🔄", callback_data="refreshmeh")
+                                InlineKeyboardButton("🔄 𝖱𝖾𝖿𝗋𝖾𝗌𝗁 🔄", callback_data="refreshmeh")
                             ]
                         ]
                     )
@@ -394,7 +394,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                 return
             except Exception:
                 await cmd.message.edit(
-                    text="Something went Wrong. Contact my [Support Group](https://t.me/JoinOT).",
+                    text="𝖲𝗈𝗆𝖾𝗍𝗁𝗂𝗇𝗀 𝖶𝖾𝗇𝗍 𝖶𝗋𝗈𝗇𝗀. 𝖢𝗈𝗇𝗍𝖺𝖼𝗍 𝖧𝖾𝗋𝖾 [𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉](https://t.me/InfinityRobots).",
                     disable_web_page_preview=True
                 )
                 return
@@ -404,12 +404,12 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Support Group", url="https://t.me/JoinOT"),
-                        InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")
+                        InlineKeyboardButton("🌧 𝖴𝗉𝖽𝖺𝗍𝖾𝗌 𝖢𝗁𝖺𝗇𝗇𝖾𝗅", url="https://t.me/Infinity_Backup"),
+                        InlineKeyboardButton("𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉 🌥", url="https://t.me/InfinityRobots")
                     ],
                     [
-                        InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-                        InlineKeyboardButton("About Dev", callback_data="aboutdevs")
+                        InlineKeyboardButton("➜ 𝖠𝖻𝗈𝗎𝗍 𝖡𝗈𝗍", callback_data="aboutbot"),
+                        InlineKeyboardButton("➜ 𝖠𝖻𝗈𝗎𝗍 𝖣𝖾𝗏", callback_data="aboutdevs")
                     ]
                 ]
             )
@@ -418,27 +418,27 @@ async def button(bot: Client, cmd: CallbackQuery):
     elif cb_data.startswith("ban_user_"):
         user_id = cb_data.split("_", 2)[-1]
         if Config.UPDATES_CHANNEL is None:
-            await cmd.answer("Sorry Sir, You didn't Set any Updates Channel!", show_alert=True)
+            await cmd.answer("𝖲𝗈𝗋𝗋𝗒 𝖲𝗂𝗋 , 𝖸𝗈𝗎 𝖣𝗂𝖽𝗇'𝗍 𝖲𝖾𝗍𝗌 𝖠𝗇𝗒 𝖴𝗉𝖽𝖺𝗍𝖾 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 !", show_alert=True)
             return
         if not int(cmd.from_user.id) == Config.BOT_OWNER:
-            await cmd.answer("You are not allowed to do that!", show_alert=True)
+            await cmd.answer("𝖸𝗈𝗎 𝖠𝗋𝖾 𝖭𝗈𝗍 𝖠𝗅𝗅𝗈𝗐𝖾𝖽 𝖳𝗈 𝖣𝗈 𝖳𝗁𝖺𝗍 !", show_alert=True)
             return
         try:
             await bot.kick_chat_member(chat_id=int(Config.UPDATES_CHANNEL), user_id=int(user_id))
-            await cmd.answer("User Banned from Updates Channel!", show_alert=True)
+            await cmd.answer("𝖴𝗌𝖾𝗋 𝖡𝖺𝗇𝗇𝖾𝖽 𝖥𝗋𝗈𝗆 𝖴𝗉𝖽𝖺𝗍𝖾𝗌 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 !", show_alert=True)
         except Exception as e:
-            await cmd.answer(f"Can't Ban Him!\n\nError: {e}", show_alert=True)
+            await cmd.answer(f"𝖢𝖺𝗇'𝗍 𝖡𝖺𝗇 𝖧𝗂𝗆!\n\nError: {e}", show_alert=True)
 
     elif "addToBatchTrue" in cb_data:
         if MediaList.get(f"{str(cmd.from_user.id)}", None) is None:
             MediaList[f"{str(cmd.from_user.id)}"] = []
         file_id = cmd.message.reply_to_message.id
         MediaList[f"{str(cmd.from_user.id)}"].append(file_id)
-        await cmd.message.edit("File Saved in Batch!\n\n"
-                               "Press below button to get batch link.",
+        await cmd.message.edit("➜ 𝖥𝗂𝗅𝖾𝗌 𝖲𝖺𝗏𝖾𝖽 𝖨𝗇 𝖡𝖺𝗍𝖼𝗁 !\n\n"
+                               "𝖯𝗋𝖾𝗌𝗌 𝖡𝖾𝗅𝗈𝗐 𝖡𝗎𝗍𝗍𝗈𝗇 𝖳𝗈 𝖦𝖾𝗍 𝖫𝗂𝗇𝗄.",
                                reply_markup=InlineKeyboardMarkup([
-                                   [InlineKeyboardButton("Get Batch Link", callback_data="getBatchLink")],
-                                   [InlineKeyboardButton("Close Message", callback_data="closeMessage")]
+                                   [InlineKeyboardButton("𝖦𝖾𝗍 𝖡𝖺𝗍𝖼𝗁 𝖫𝗂𝗇𝗄", callback_data="getBatchLink")],
+                                   [InlineKeyboardButton("➜ 𝖢𝗅𝗈𝗌𝖾", callback_data="closeMessage")]
                                ]))
 
     elif "addToBatchFalse" in cb_data:
@@ -447,9 +447,9 @@ async def button(bot: Client, cmd: CallbackQuery):
     elif "getBatchLink" in cb_data:
         message_ids = MediaList.get(f"{str(cmd.from_user.id)}", None)
         if message_ids is None:
-            await cmd.answer("Batch List Empty!", show_alert=True)
+            await cmd.answer("𝖡𝖺𝗍𝖼𝗁 𝖫𝗂𝗌𝗍 𝖤𝗆𝗉𝗍𝗒 !", show_alert=True)
             return
-        await cmd.message.edit("Please wait, generating batch link ...")
+        await cmd.message.edit("𝖯𝗅𝖾𝖺𝗌𝖾 𝖶𝖺𝗂𝗍 , 𝖦𝖾𝗇𝖾𝗋𝖺𝗍𝗂𝗇𝗀 𝖡𝖺𝗍𝖼𝗁 𝖫𝗂𝗇𝗄 ...")
         await save_batch_media_in_channel(bot=bot, editable=cmd.message, message_ids=message_ids)
         MediaList[f"{str(cmd.from_user.id)}"] = []
 
